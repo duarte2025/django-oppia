@@ -30,7 +30,7 @@ def handle_uploaded_file(f, extract_path, request, user):
         zip_file = ZipFile(zipfilepath)
         zip_file.extractall(path=extract_path)
     except BadZipfile:
-        messages.error(request, _("Invalid zip file"), extra_tags="danger")
+        messages.error(request, _("Invalid zip file"), extra_categories="danger")
         return False, 500
 
     mod_name = ''
@@ -40,13 +40,13 @@ def handle_uploaded_file(f, extract_path, request, user):
 
     # check there is at least a sub dir
     if mod_name == '':
-        messages.info(request, _("Invalid course zip file"), extra_tags="danger")
+        messages.info(request, _("Invalid course zip file"), extra_categories="danger")
         return False, 400
 
     try:
         course, response = process_course(extract_path, f, mod_name, request, user)
     except Exception as e:
-        messages.error(request, e.message, extra_tags="danger")
+        messages.error(request, e.message, extra_categories="danger")
         return False, 500
     finally:
         # remove the temp upload files
@@ -59,7 +59,7 @@ def process_course(extract_path, f, mod_name, request, user):
     xml_path = os.path.join(extract_path, mod_name, "module.xml")
     # check that the module.xml file exists
     if not os.path.isfile(xml_path):
-        messages.info(request, _("Zip file does not contain a module.xml file"), extra_tags="danger")
+        messages.info(request, _("Zip file does not contain a module.xml file"), extra_categories="danger")
         return False, 400
 
     # parse the module.xml file

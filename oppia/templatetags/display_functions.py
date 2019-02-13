@@ -1,4 +1,4 @@
-# oppia/templatetags/display_functions.py
+# oppia/templatecategories/display_functions.py
 import hashlib
 import json
 import math

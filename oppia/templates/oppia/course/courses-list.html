@@ -62,7 +62,7 @@
 				{% if course.is_archived %}
 					- <em>{% trans 'archived' %}</em>
 				{% endif %}<br/>
-				<small>{% trans 'Tags:' %} {{ course.get_tags }}</small></td>
+				<small>{% trans 'categories:' %} {{ course.get_categories }}</small></td>
 				<td>{{ course.lastupdated_date }} </td>
 				<td>{{ course.total_downloads }} downloads by {{ course.distinct_downloads }} users<br/>
 					<a href="{% url 'oppia_course_download' course.id %}">{% trans 'download course' %}</a>

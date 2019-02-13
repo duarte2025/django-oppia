@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load display_functions %}
-{% load crispy_forms_tags %}
+{% load crispy_forms_categories %}
 
 {% block extra_head_title %}
 	{{ course.title|title_lang:LANGUAGE_CODE }}
@@ -11,7 +11,7 @@
 
 <h2><a href="{% url 'oppia_completion_rates' %}">{% trans 'Completion Rates' %}</a> &gt; {{ course.title|title_lang:LANGUAGE_CODE }}</h2>
 
-<p><em>{% trans 'Tags:' %} {{ course.get_tags}}</em></p>
+<p><em>{% trans 'categories:' %} {{ course.get_categories}}</em></p>
 	
 <h3>{% trans 'Course completion rates' %}</h3>
 <p>{% trans 'Users enroled:' %} {{ users_enroled_count }}</p>

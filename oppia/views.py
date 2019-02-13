@@ -230,7 +230,7 @@ def tag_courses_view(request, tag_id):
     dashboard_accessed.send(sender=None, request=request, data=None)
     return render_courses_list(request, courses, {'current_tag': tag_id})
 
-        
+
 def upload_step1(request):
     if not request.user.userprofile.get_can_upload():
         raise exceptions.PermissionDenied
@@ -262,12 +262,12 @@ def upload_step2(request, course_id, editing=False):
     if request.method == 'POST':
         form = UploadCourseStep2Form(request.POST, request.FILES)
         if form.is_valid() and course:
-            #add the tags
-            add_course_tags(request, form, course)
+            #add the categories
+            add_course_categories(request, form, course)
             redirect = 'oppia_course' if editing else 'oppia_upload_success'
             return HttpResponseRedirect(reverse(redirect))  # Redirect after POST
     else:
-        form = UploadCourseStep2Form(initial={'tags': course.get_tags(),
+        form = UploadCourseStep2Form(initial={'categories': course.get_categories(),
                                     'is_draft': course.is_draft, })  # An unbound form
 
     page_title = _(u'Upload Course - step 2') if not editing else _(u'Edit course')
@@ -277,13 +277,13 @@ def upload_step2(request, course_id, editing=False):
                                'editing': editing,
                                'title': page_title})
 
-def add_course_tags(request, form, course):
-    tags = form.cleaned_data.get("tags","").strip().split(",")
+def add_course_categories(request, form, course):
+    categories = form.cleaned_data.get("categories","").strip().split(",")
     is_draft = form.cleaned_data.get("is_draft")
-    if len(tags) > 0:
+    if len(categories) > 0:
         course.is_draft = is_draft
         course.save()
-        for t in tags:
+        for t in categories:
             try:
                 tag = Tag.objects.get(name__iexact=t.strip())
             except Tag.DoesNotExist:
@@ -299,8 +299,8 @@ def add_course_tags(request, form, course):
                 ct.course = course
                 ct.tag = tag
                 ct.save()
-    
-    
+
+
 def generate_graph_data(dates_types_stats, is_monthly=False):
     dates = []
 
@@ -615,7 +615,7 @@ def cohort_leaderboard_view(request, cohort_id):
         leaderboard = paginator.page(page)
     except (EmptyPage, InvalidPage):
         leaderboard = paginator.page(paginator.num_pages)
-    
+
     return render(request, 'oppia/course/cohort-leaderboard.html',
                               {'cohort': cohort,
                                'page': leaderboard, })

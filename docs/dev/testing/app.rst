@@ -199,7 +199,7 @@ We have several ways to run tests:
 
  A test suite allows us to run a collection of test that we want. 
 
- To create a test suite, we need to create a new class and add these tags to the beginning of it:
+ To create a test suite, we need to create a new class and add these categories to the beginning of it:
 
  .. code-block:: text
   

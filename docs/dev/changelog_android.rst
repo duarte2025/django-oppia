@@ -168,7 +168,7 @@ v58 (6.0.1) - Released 6 May 2016
 * 538: Add mp3 as supported file type - http://github.com/DigitalCampus/oppia-mobile-android/issues/issue/538
 * 338: On download courses page if no connection then close activity too - http://github.com/DigitalCampus/oppia-mobile-android/issues/issue/338
 * 533: Update drawer header so the logo is pulled from the one specified for the app - http://github.com/DigitalCampus/oppia-mobile-android/issues/issue/533 
-* 529: Show message when no tags/courses are available - http://github.com/DigitalCampus/oppia-mobile-android/issues/issue/529
+* 529: Show message when no categories/courses are available - http://github.com/DigitalCampus/oppia-mobile-android/issues/issue/529
 * 534: Display message in scorecard if no courses installed - http://github.com/DigitalCampus/oppia-mobile-android/issues/issue/534
 * 540: Occassional Null Pointer Exception on UIUtils.java:155 - http://github.com/DigitalCampus/oppia-mobile-android/issues/issue/540
 * 514: Copy in the mquiz-jar classes - rather than having as separate jar - http://github.com/DigitalCampus/oppia-mobile-android/issues/issue/514

@@ -37,17 +37,17 @@ class TagResourceTest(ResourceTestCaseMixin, TestCase):
         resp = self.api_client.get(self.url, format='json', data=self.auth_data)
         self.assertHttpOK(resp)
 
-    # test valid json response and with 5 tags
-    def test_has_tags(self):
+    # test valid json response and with 5 categories
+    def test_has_categories(self):
         resp = self.api_client.get(self.url, format='json', data=self.auth_data)
         self.assertHttpOK(resp)
         self.assertValidJSON(resp.content)
         response_data = self.deserialize(resp)
-        self.assertTrue('tags' in response_data)
-        # should have 5 tags with the test data set
-        self.assertEquals(len(response_data['tags']), 4)
+        self.assertTrue('categories' in response_data)
+        # should have 5 categories with the test data set
+        self.assertEquals(len(response_data['categories']), 4)
         # check each course had a download url
-        for tag in response_data['tags']:
+        for tag in response_data['categories']:
             self.assertTrue('count' in tag)
             self.assertTrue('id' in tag)
             self.assertTrue('name' in tag)
@@ -56,7 +56,7 @@ class TagResourceTest(ResourceTestCaseMixin, TestCase):
             # check name not null
             self.assertTrue(len(tag['name']) > 0)
 
-    # test getting a listing of courses for one of the tags
+    # test getting a listing of courses for one of the categories
     def test_tag_list(self):
         resource_url = get_api_url('tag', 2)
         resp = self.api_client.get(resource_url, format='json', data=self.auth_data)
@@ -79,4 +79,4 @@ class TagResourceTest(ResourceTestCaseMixin, TestCase):
         resp = self.api_client.get(resource_url, format='json', data=self.auth_data)
         self.assertHttpNotFound(resp)
 
-    #TODO check tags and permissions - so only tags that have course the user is allowed to view will appear
+    #TODO check categories and permissions - so only categories that have course the user is allowed to view will appear

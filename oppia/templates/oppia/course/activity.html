@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load display_functions %}
-{% load crispy_forms_tags %}
+{% load crispy_forms_categories %}
 
 {% block extra_head_title %}
 	{{ course.title|title_lang:LANGUAGE_CODE }}
@@ -62,7 +62,7 @@
 {% block content %}
 
 <h2>{{ course.title|title_lang:LANGUAGE_CODE }}</h2>
-<p><em>{% trans 'Tags:' %} {{ course.get_tags}}</em></p>
+<p><em>{% trans 'categories:' %} {{ course.get_categories}}</em></p>
 	
 <h3>{% trans 'courses_recent_activity' %}</h3>
 <div id="attempts_chart_div" class="graph">{% trans 'graph_generating'%}</div>

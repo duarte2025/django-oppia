@@ -2,7 +2,7 @@
 {% if messages %}
 <div class="glob-messages">
     {% for message in messages %}
-        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+        <div class="alert {% if message.categories %}alert-{{ message.categories }}{% endif %}" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             {{ message }}
         </div>

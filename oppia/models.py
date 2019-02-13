@@ -94,10 +94,10 @@ class Course(models.Model):
         else:
             return False
 
-    def get_tags(self):
-        tags = Tag.objects.filter(coursetag__course=self)
+    def get_categories(self):
+        categories = Tag.objects.filter(coursetag__course=self)
         str = ""
-        for t in tags:
+        for t in categories:
             str = str + t.name + ", "
         return str[:-2]
 
@@ -175,11 +175,11 @@ class Tag(models.Model):
     description = models.TextField(blank=True, null=True, default=None)
     order_priority = models.IntegerField(default=0)
     highlight = models.BooleanField(default=False)
-    icon = models.FileField(upload_to="tags", null=True, blank=True, default=None)
+    icon = models.FileField(upload_to="categories", null=True, blank=True, default=None)
 
     class Meta:
         verbose_name = _('Tag')
-        verbose_name_plural = _('Tags')
+        verbose_name_plural = _('categories')
 
     def __unicode__(self):
         return self.name
@@ -191,7 +191,7 @@ class CourseTag(models.Model):
 
     class Meta:
         verbose_name = _('Course Tag')
-        verbose_name_plural = _('Course Tags')
+        verbose_name_plural = _('Course categories')
 
 
 class Section(models.Model):

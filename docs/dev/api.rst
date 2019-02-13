@@ -300,7 +300,7 @@ For adding a possible response to a quiz question
 		
 Tag
 ---
-For getting the tags and number of courses for each tag
+For getting the categories and number of courses for each tag
 
 * Available methods: GET
 * Required parameters:
@@ -308,7 +308,7 @@ For getting the tags and number of courses for each tag
 	* ``username``
 	* ``api_key``
 
-* Example GET request (for getting the set of tags)::
+* Example GET request (for getting the set of categories)::
 
 	http://localhost/api/v1/tag/?format=json&username=XXXX&api_key=XXXXXXXX
  

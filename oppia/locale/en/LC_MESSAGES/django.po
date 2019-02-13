@@ -42,7 +42,7 @@ msgid "You may only upload a zip file"
 msgstr ""
 
 #: forms.py:53
-msgid "A comma separated list of tags to help classify your course"
+msgid "A comma separated list of categories to help classify your course"
 msgstr ""
 
 #: forms.py:55
@@ -95,7 +95,7 @@ msgid "Tag"
 msgstr ""
 
 #: models.py:131
-msgid "Tags"
+msgid "categories"
 msgstr ""
 
 #: models.py:141
@@ -103,7 +103,7 @@ msgid "Course Tag"
 msgstr ""
 
 #: models.py:142
-msgid "Course Tags"
+msgid "Course categories"
 msgstr ""
 
 #: models.py:153 templates/oppia/schedule-form.html:7
@@ -787,7 +787,7 @@ msgstr ""
 #: templates/oppia/course/quizzes.html:7
 #: templates/oppia/course/schedules.html:8
 #: templates/oppia/preview/home.html:26
-msgid "Tags:"
+msgid "categories:"
 msgstr ""
 
 #: templates/oppia/course/activity-detail.html:40
@@ -1241,8 +1241,8 @@ msgstr "Failed to get file length. Are you sure that the URL is correct and that
 #~ msgid "form_field_course_file"
 #~ msgstr "Course file"
 
-#~ msgid "form_field_tags"
-#~ msgstr "Tags"
+#~ msgid "form_field_categories"
+#~ msgstr "categories"
 
 #~ msgid "form_field_is_draft"
 #~ msgstr "Is draft?"

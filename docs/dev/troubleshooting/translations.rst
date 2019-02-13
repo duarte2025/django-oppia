@@ -16,7 +16,7 @@ Additional problems we have noticed:
 Using mismatching single or double quotes
 -------------------------------------------
 
-Be careful to check that the single or double quotes in the HTML tags are of matching types. In the examples 
+Be careful to check that the single or double quotes in the HTML categories are of matching types. In the examples 
 below (shown as large image as well as plain text), the first example uses a different type of double quotes. The 
 multilanguage filter in Moodle then cannot understand what is meant by the HTML code, and so fails to recognise that we 
 are trying to enter multilingual content. 
@@ -49,7 +49,7 @@ The likely cause of having different types of quotes is from cutting and pasting
 Additional style attribute used in page and topic titles
 ---------------------------------------------------------
 
-For page and topic/section titles, when the multilang span tags include additional attributes, this seems to stop the 
+For page and topic/section titles, when the multilang span categories include additional attributes, this seems to stop the 
 Moodle multilang filter functioning correctly, but applies to the titles only, not the page content.
 
 Example 1 (does not work):

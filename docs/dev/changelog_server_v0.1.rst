@@ -88,7 +88,7 @@ v0.1.20
 
 v0.1.19
 -------
-* Added script for scanning dir of video files to create the tags: https://github.com/DigitalCampus/django-oppia/issues/44
+* Added script for scanning dir of video files to create the categories: https://github.com/DigitalCampus/django-oppia/issues/44
 * Also added auto creation of images for video files: https://github.com/DigitalCampus/django-oppia/issues/45
 
 v0.1.18

@@ -12,7 +12,7 @@ Add a new course
 #. From the menu bar, select 'Upload'
 #. Select the course zip file that you exported from Moodle
 #. Click on upload
-#. Add or update the course tags and other information
+#. Add or update the course categories and other information
 #. Click save   
 
 
@@ -25,10 +25,10 @@ View courses for specific tag
 ---------------------------------
 
 #. From the menu bar, select 'Courses'
-#. From the drop down list of tags at the top of the page, select the relevant tag
+#. From the drop down list of categories at the top of the page, select the relevant tag
 #. The page will refresh and show just the courses for the selected tag
 
-Update course information (tags etc)
+Update course information (categories etc)
 ---------------------------------------
 
 Currently this should be done during the course export process in Moodle.

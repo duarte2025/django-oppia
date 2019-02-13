@@ -39,7 +39,7 @@ v2017042700 - Released 27 Apr 2017
 v2017022000 - Released: 20 Feb 2017
 -------------------------------------
 
-* 136: Don't strip out all the HTML tags from quiz question text - https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/136
+* 136: Don't strip out all the HTML categories from quiz question text - https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/136
 * 174: XML parsing error when the section/topic description/summary contains an image - https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/174
 * 155: Extracting section title - missing custom name - https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/155
 * 78: How to include some layout (html) in quiz questions - https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/78
@@ -73,7 +73,7 @@ v2016082600 - Released: 26 Aug 2016
 v2016041301 - Released: 13 Apr 2016
 -------------------------------------
 
-* 135: Add course tags to the course XML file - https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/issue/135
+* 135: Add course categories to the course XML file - https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/issue/135
 * 131: Error when exporting file activity when no description entered - https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/issue/131
 * 148: On export check the course shortname used - https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/issue/148
 
@@ -119,7 +119,7 @@ v2016011400 - released: 14 Jan 2016
 v2015021800 - released: 18 Feb 2015
 --------------------------------------
 
-* https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/issue/122 - save course tags
+* https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/issue/122 - save course categories
 * https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/issue/121 - make course download link clearer
 * https://github.com/DigitalCampus/moodle-block_oppia_mobile_export/issues/issue/123 - allow direct export to OppiaMobile server
 

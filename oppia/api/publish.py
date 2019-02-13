@@ -16,8 +16,8 @@ from oppia.settings.models import SettingProperties
 from oppia.uploader import handle_uploaded_file
 
 
-def add_course_tags(request, course, tags):
-    for t in tags:
+def add_course_categories(request, course, categories):
+    for t in categories:
         try:
             tag = Tag.objects.get(name__iexact=t.strip())
         except Tag.DoesNotExist:
@@ -77,7 +77,7 @@ def publish_view(request):
     if request.method != 'POST':
         return HttpResponse(status=405)
 
-    required = ['username', 'password', 'tags', 'is_draft']
+    required = ['username', 'password', 'categories', 'is_draft']
 
     validation_errors = []
     validation_errors = check_required_fields(request, required, validation_errors)
@@ -116,12 +116,12 @@ def publish_view(request):
         course.is_draft = (request.POST['is_draft'] == "True" or request.POST['is_draft'] == "true")
         course.save()
 
-        # remove any existing tags
+        # remove any existing categories
         CourseTag.objects.filter(course=course).delete()
 
-        # add tags
-        tags = request.POST['tags'].strip().split(",")
-        add_course_tags(request, course, tags)
+        # add categories
+        categories = request.POST['categories'].strip().split(",")
+        add_course_categories(request, course, categories)
 
         msgs = get_messages_array(request)
         if len(msgs) > 0:
@@ -131,7 +131,7 @@ def publish_view(request):
 
 
 def validate_fields(request):
-    required = ['username', 'password', 'tags', 'is_draft']
+    required = ['username', 'password', 'categories', 'is_draft']
     is_valid = True
 
     for r in required:
@@ -157,5 +157,5 @@ def get_messages_array(request):
     msgs = messages.get_messages(request)
     response = []
     for msg in msgs:
-        response.append({'tags': msg.tags, 'message': msg.message})
+        response.append({'categories': msg.categories, 'message': msg.message})
     return response

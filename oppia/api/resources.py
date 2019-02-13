@@ -682,7 +682,7 @@ class TagResource(ModelResource):
 
     def alter_list_data_to_serialize(self, request, data):
         if isinstance(data, dict) and 'objects' in data:
-            data['tags'] = data['objects']
+            data['categories'] = data['objects']
             del data['objects']
         return data
 

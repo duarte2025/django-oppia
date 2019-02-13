@@ -23,7 +23,7 @@
 				{% if course.is_archived %}
 					- <em>{% trans 'archived' %}</em>
 				{% endif %}<br/>
-				<small>{% trans 'Tags:' %} {{ course.get_tags}}</small></td>
+				<small>{% trans 'categories:' %} {{ course.get_categories}}</small></td>
 			</tr>
 	{% endfor %}
 			</tbody>

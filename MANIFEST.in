@@ -3,7 +3,7 @@ include README.md
 include CONTRIBUTING.md
 recursive-include oppia/static *
 recursive-include oppia/templates *
-recursive-include oppia/templatetags *
+recursive-include oppia/templatecategories *
 recursive-include docs *
 recursive-include oppia/locale *
 recursive-include oppia/utils *
